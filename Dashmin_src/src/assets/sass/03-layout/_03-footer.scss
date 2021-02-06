@@ -1,0 +1,49 @@
+/* ************************
+   03.3: Footer
+   ********************* */
+   .footer {
+      height: 70px;
+      //background-color: #CCC;
+      padding-left: 290px;
+      display: flex;
+      align-items: center;
+      @extend .trans3;
+      font-size: 14px;
+      line-height: 1;
+      background-color: #060818;
+      @include medium {
+         padding: 0 15px;
+         justify-content: center;
+      }
+      a {
+         @extend .white;
+         @extend .bold;
+      }
+
+      &.style--two {
+         padding: 0 15px;
+         justify-content: center;
+      }
+      &.card_color-bg {
+         @extend .card_color-bg;
+      }
+   }
+   body {
+      &.sidebar-folded {
+         .footer {
+            padding-left: 90px;
+            @include medium {
+               padding: 0 15px;
+            }
+         }
+         
+         &.open-sidebar-folded {
+            .footer {
+               padding-left: 290px;
+               @include medium {
+                  padding: 0 15px;
+               }
+            }
+         }
+      }
+   }
